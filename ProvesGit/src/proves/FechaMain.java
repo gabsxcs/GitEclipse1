@@ -48,9 +48,19 @@ public class FechaMain {
 		else if(primera.dia > segunda.dia)
 			System.out.println(segunda);
 		
-	
+		int diferenciaDias = calcularDiferenciaEnDias(primera, segunda);
+        System.out.println("La diferencia en días es: " + diferenciaDias);
+
 		
 		entrada.close();
 	}
 
-}
+
+
+private static int calcularDiferenciaEnDias(Fecha fecha1, Fecha fecha2) {
+    int diasFecha1 = fecha1.año * 365 + fecha1.mes * 30 + fecha1.dia;
+    int diasFecha2 = fecha2.año * 365 + fecha2.mes * 30 + fecha2.dia;
+
+    return Math.abs(diasFecha1 - diasFecha2);
+
+}}
